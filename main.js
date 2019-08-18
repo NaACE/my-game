@@ -33,4 +33,5 @@ game.newLoop("game", function () {
   brush.drawTextS({ text: 'count: ' + count, size: 32, color: '#FFFFFF', strokeWidth: 1, x: 10, y: 10, style: 'bold'});
 });
 
+console.log(cobblestone[1]);
 game.start();
