@@ -29,6 +29,10 @@ game.newLoop("game", function () {
     escape.draw();
     playerTouchedEscape();
   }
+  if(antivirus.length != 0) {
+    OOP.drawArr(antivirus);
+    //movementAntivirus();
+  }
   brush.drawTextS({ text: 'count: ' + count, size: 32, color: '#FFFFFF', strokeWidth: 1, x: 10, y: 10, style: 'bold'});
 });
 
