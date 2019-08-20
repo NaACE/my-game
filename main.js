@@ -11,7 +11,7 @@ game.newLoop("game", function () {
   player.draw();
 
   controlerPlayer();
-  paintingBlocks();
+  playerPaintingBlocks();
   playerTouchedFood();
 
   if (userMadeMove() == true) {
@@ -29,9 +29,7 @@ game.newLoop("game", function () {
     escape.draw();
     playerTouchedEscape();
   }
-
   brush.drawTextS({ text: 'count: ' + count, size: 32, color: '#FFFFFF', strokeWidth: 1, x: 10, y: 10, style: 'bold'});
 });
 
-console.log(cobblestone[1]);
 game.start();
