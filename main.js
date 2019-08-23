@@ -29,11 +29,11 @@ game.newLoop("game", function () {
     escape.draw();
     playerTouchedEscape();
   }
-  if(antivirus.length != 0) {
+  if(antivirus.length >= 1) {
+    bruteForceAllAntivirus();
     OOP.drawArr(antivirus);
-    //movementAntivirus();
   }
   brush.drawTextS({ text: 'count: ' + count, size: 32, color: '#FFFFFF', strokeWidth: 1, x: 10, y: 10, style: 'bold'});
 });
-
+console.log(antivirus);
 game.start();
