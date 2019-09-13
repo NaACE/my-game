@@ -1,7 +1,8 @@
-forARR();
+array_filling();
 
 game.newLoop("game", function () {
   game.clear();
+
   OOP.drawArr(wall);
   OOP.drawArr(field);
   OOP.drawArr(eats);
@@ -14,7 +15,7 @@ game.newLoop("game", function () {
   playerPaintingBlocks();
   playerTouchedFood();
 
-  if (userMadeMove() == true) {
+  if (user_made_move == true) {
     dropCobblestone();
     dropFood();
     dropBiasCobblestone();
@@ -30,10 +31,12 @@ game.newLoop("game", function () {
     playerTouchedEscape();
   }
   if(antivirus.length >= 1) {
-    bruteForceAllAntivirus();
+    move_antivirus();
     OOP.drawArr(antivirus);
   }
   brush.drawTextS({ text: 'count: ' + count, size: 32, color: '#FFFFFF', strokeWidth: 1, x: 10, y: 10, style: 'bold'});
 });
-console.log(antivirus);
+console.log(antivirus[0].getPosition());
+
+game.setLoop("game");
 game.start();
