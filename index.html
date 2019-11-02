@@ -4,47 +4,16 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width,user-scalable=no" />
-  <script src="https://cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser-arcade-physics.min.js"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
 </head>
 
 <body>
-  <script>
-    var GameState = {
-      //инициализация параметров игры
-      init: function () {
-      },
-
-      //загрузка игровых ресурсов до запуска игры
-      preload: function () {
-        game.load.image('background', '/img/background.png');
-      },
-
-      //исполняется один раз после того, как все ресурсы будут загружены
-      create: function () {
-        game.add.tileSprite(0, 0, 480, 640, 'background');
-      },
-
-      //эта функция исполняется несколько раз в секунду
-      update: function () {
-      }
-
-    };
-    var game = new Phaser.Game(640, 360, Phaser.AUTO);
-  </script>
-
-  <!--<script type="text/javascript" src="/lib/saltwort.js"></script>
+  <script type="text/javascript" src="pointjs_0.2.0.0.js"></script>
+  <script type="text/javascript" src="/lib/saltwort.js"></script>
   <script type="text/javascript" src="/lib/levels.js"></script>
-  <script type="text/javascript" src="/lib/block.js"></script>
-  <script type="text/javascript" src="/lib/antivirus.js"></script>
-  <script type="text/javascript" src="/lib/player.js"></script>
+  <script type="text/javascript" src="/lib/physica.js"></script>
   <script type="text/javascript" src="/lib/init.js"></script>
-  <script type="text/javascript" src="main.js"></script>-->
+  <script type="text/javascript" src="/lib/player.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
