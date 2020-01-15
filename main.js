@@ -1,26 +1,39 @@
-array_filling();
+forARR();
 
 game.newLoop("game", function () {
   game.clear();
-
-  OOP.drawArr(cobblestone);
+  OOP.drawArr(wall);
   OOP.drawArr(field);
   OOP.drawArr(eats);
-  OOP.drawArr(wall);
+  OOP.drawArr(cobblestone);
 
-  setPositionC(player.getPosition());
+  pointJS.camera.setPositionC(player.getPosition());
   player.draw();
 
-  controler_player();
-  check_what_player_stepped_on();
+  controlerPlayer();
+  playerPaintingBlocks();
+  playerTouchedFood();
 
-  if(user_made_move == true) {
-    physica.fall_stones_and_food();
-    physica.movement_direction();
+  if (userMadeMove() == true) {
+    dropCobblestone();
+    dropFood();
+    dropBiasCobblestone();
+    dropBiasEats();
   }
-  
+  if (userGoNextLvL() == true) {
+    nextLevel();
+    setUserGoNextLvL();
+    game.setLoop('game');
+  }
+  if(escape != null) {
+    escape.draw();
+    playerTouchedEscape();
+  }
+  if(antivirus.length >= 1) {
+    bruteForceAllAntivirus();
+    OOP.drawArr(antivirus);
+  }
   brush.drawTextS({ text: 'count: ' + count, size: 32, color: '#FFFFFF', strokeWidth: 1, x: 10, y: 10, style: 'bold'});
 });
-
-game.setLoop("game");
+console.log(antivirus);
 game.start();
